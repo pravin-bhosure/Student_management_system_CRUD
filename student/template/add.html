@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+            integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+            crossorigin="anonymous">
+
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+            
+            
+        <title>Adding Students</title>
+
+    </head>
+    <body>
+
+        <h2 class="text-center my-3 text-primary ">ADD STUDENT</h2>
+        <hr>
+        <form action="stu_add" class="text-center my-3" method="POST">
+            {% csrf_token %}
+            <hr>
+            <label for="fName">First Name</label><br>
+            <input type="text" id="fname" name="fname" placeholder="First Name"
+                class="text-center my-3 rounded-pill"><br>
+           
+            <label for="lName">Last Name</label><br>
+            <input type="text" id="lname" name="lname" placeholder="Last Name"
+                class="text-center my-3 rounded-pill"><br>
+
+            
+            <label for="Address">Address</label><br>
+            <input type="text" id="Address" name="Address" placeholder="Address"
+                class="text-center my-3 rounded-pill"><br>
+
+            
+            <label for="Contact">Contact</label><br>
+            <input type="text" id="Contact" name="Contact" placeholder="Contact"
+                class="text-center my-3 rounded-pill"><br>
+
+            
+            <label for="Class">Class</label><br>
+            <input type="number" id="Class" name="Class" placeholder="Class"
+                class="text-center my-3 rounded-pill"><br><br>
+
+            <!-- <label for="subject">Subject</label><br>
+            <input type="number" id="subject" name="subject_name" placeholder="Subject"
+                class="text-center my-3 rounded-pill"><br><br> -->
+
+            <label for="subject_name">Subject</label><br>
+            <select  name="subject_name" id="sub">
+                {% for i in sub %}
+                <option >{{i.id}}</option>
+                {% endfor %}
+                
+            </select><br><br>
+
+            <button type="submit" class="btn btn-success" id="submit">Submit</button>
+        </form>
+
+        
+        
+
+        
+        
+            
+       
+        
+   
+    </body>
+</html>

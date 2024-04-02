@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title>Login</title>
+</head>
+<body>
+  {% for messege in messages %}    
+    <div class="alert alert-{{messege.tags}} mb-0 alert-dismissible fade show" role="alert">
+    <strong>Messege: </strong> {{messege}} {{fname}}
+    </div>
+    {% endfor %}
+    <h1 class="text-center my-3">Student Information</h1>
+      <hr>
+      <div class="text-center">
+    
+      <a class="btn btn-outline-success" href='stu_list'>Student list</a>
+      <a class="btn btn-outline-success" href='stu_filter'>Student Search</a>
+      <a class="btn btn-outline-primary" href='stu_add'>Add Student</a>
+      <a class="btn btn-outline-primary" href='stu_delete'>Delete Student</a><br><br>
+      <a class="btn btn-outline-primary" href='stu_logout'>Logout</a>
+      
+      
+      </div>
+    <hr> 
+   
+     
+</body>
+</html>
